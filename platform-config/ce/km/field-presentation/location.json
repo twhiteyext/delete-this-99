@@ -134,7 +134,10 @@
         },
         {
           "id": "addressHidden"
-        },      
+        },
+        {
+          "id": "serviceAreaPlaces"
+        },        
         {
           "id": "mainPhone",
           "visibleOnAdd": true
@@ -1008,7 +1011,23 @@
           "value": "Específicas do editor"
         }
       ],
-      "entryType": "SECTION"
+      "entryType": "DIVIDER"
+    },
+    {
+      "defaultCollapsed": true,
+      "displayName": "Uber",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "uberLink"
+        },
+        {
+          "id": "uberTripBranding"
+        },
+        {
+          "id": "uberClientId"
+        }
+      ]
     },
     {
       "displayName": "Other",

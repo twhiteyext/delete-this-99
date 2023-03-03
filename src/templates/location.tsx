@@ -37,7 +37,6 @@ export const config: TemplateConfig = {
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: [
-      "id",
       "uid",
       "meta",
       "name",
@@ -51,7 +50,7 @@ export const config: TemplateConfig = {
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      entityTypes: ["location"],
+      savedFilterIds: ["465593563"]
     },
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -145,7 +144,6 @@ const Location: Template<TemplateRenderProps> = ({
     services,
     description,
   } = document;
-
   return (
     <>
       <PageLayout _site={_site}>
@@ -157,6 +155,8 @@ const Location: Template<TemplateRenderProps> = ({
                 <Details address={address} phone={mainPhone}></Details>
                 {services && <List list={services}></List>}
               </div>
+              <h1 className="env-variable">
+              </h1>
               <div className="bg-gray-100 p-2">
                 {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
               </div>
@@ -168,7 +168,7 @@ const Location: Template<TemplateRenderProps> = ({
               )}
               <div className="bg-gray-100 p-2">
                 <div className="text-xl font-semibold">{`About ${name}`}</div>
-                <p className="pt-4">{description}</p>
+                <p className="pt-4">{description} hi there!</p>
               </div>
             </div>
           </div>

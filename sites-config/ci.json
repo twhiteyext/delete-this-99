@@ -22,7 +22,7 @@
         ],
         "event": "ON_PAGE_GENERATE",
         "functionName": "Generate"
-      }
+      } 
     ]
   },
   "dependencies": {
