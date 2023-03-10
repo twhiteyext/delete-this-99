@@ -1,5 +1,4 @@
 export async function main(argumentJson) {
-	let catResp;
 	console.log(argumentJson)
 
 	return {
