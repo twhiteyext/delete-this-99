@@ -22,6 +22,18 @@
         ],
         "event": "ON_PAGE_GENERATE",
         "functionName": "Generate"
+      },
+      {
+        "pluginName": "Games",
+        "functionName": "main",
+        "sourceFiles": [
+          {
+            "root": "complex-functions",
+            "pattern": "api/\\{\\{sessionId\\}\\}/games/*{.ts,.json}"
+          }
+        ],
+        "event": "API",
+        "apiPath": "api/{{sessionId}}/games"
       } 
     ]
   },

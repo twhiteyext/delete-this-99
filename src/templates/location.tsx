@@ -168,7 +168,7 @@ const Location: Template<TemplateRenderProps> = ({
               )}
               <div className="bg-gray-100 p-2">
                 <div className="text-xl font-semibold">{`About ${name}`}</div>
-                <p className="pt-4">{description} hi there!</p>
+                <p className="pt-4">{description} hi there!!!</p>
               </div>
             </div>
           </div>
