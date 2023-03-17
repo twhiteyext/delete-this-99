@@ -15,7 +15,7 @@ export async function main(argumentJson: PluginInput): Promise<PluginResponse> {
 	return {
 		body: JSON.stringify({
 			sessionId: argumentJson.pathParams.sessionId,
-			businessName: argumentJson.site.businessName,
+			site: argumentJson.site,
 		}),
 		statusCode: 200,
 		headers: {"Content-Type": "application/json"}
