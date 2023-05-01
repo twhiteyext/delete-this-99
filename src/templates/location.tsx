@@ -153,7 +153,10 @@ const Location: Template<TemplateRenderProps> = ({
       return false
     }
   }
-  window.addEventListener("test", null, options)
+  let button = document.querySelector('#button')
+  button.addEventListener('click', ()=>{
+    console.log("CLICKED")
+  })
   return (
     <>
       <PageLayout _site={_site}>
@@ -180,6 +183,9 @@ const Location: Template<TemplateRenderProps> = ({
                 <div className="text-xl font-semibold">{`About ${name}`}</div>
                 <p className="pt-4">{description} hi there!</p>
               </div>
+              <button>
+                Test button
+              </button>
             </div>
           </div>
         </div>
