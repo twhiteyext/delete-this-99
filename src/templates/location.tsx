@@ -147,6 +147,13 @@ const Location: Template<TemplateRenderProps> = ({
   setTimeout(()=>{
     console.log("intentional error")
   }, 2000)
+  const options = {
+    get passive() {
+      console.log("hello")
+      return false
+    }
+  }
+  window.addEventListener("test", null, options)
   return (
     <>
       <PageLayout _site={_site}>
