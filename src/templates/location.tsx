@@ -144,6 +144,9 @@ const Location: Template<TemplateRenderProps> = ({
     services,
     description,
   } = document;
+  setTimeout(()=>{
+    console.log("intentional error")
+  }, 2000)
   return (
     <>
       <PageLayout _site={_site}>
