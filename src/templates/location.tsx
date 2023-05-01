@@ -153,8 +153,7 @@ const Location: Template<TemplateRenderProps> = ({
       return false
     }
   }
-  let button = document.querySelector('#button')
-  button.addEventListener('click', ()=>{
+  addEventListener('click', ()=>{
     console.log("CLICKED")
   })
   return (
