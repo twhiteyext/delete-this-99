@@ -33,7 +33,7 @@ import "../index.css";
  */
 export const config: TemplateConfig = {
   stream: {
-    $id: "my-stream-id-1",
+    $id: "my-stream-id-2",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: [
