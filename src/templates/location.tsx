@@ -26,6 +26,7 @@ import List from "../components/list";
 import PageLayout from "../components/page-layout";
 import StaticMap from "../components/static-map";
 import Favicon from "../public/yext-favicon.ico";
+import { LexicalRichText } from "@yext/react-components";
 import "../index.css";
 
 /**
@@ -189,7 +190,7 @@ const Location: Template<TemplateRenderProps> = ({
               </button>
             </div>
             <div>
-              {c_richText}
+              <LexicalRichText serializedAST={c_richText}/>
             </div>
           </div>
         </div>
