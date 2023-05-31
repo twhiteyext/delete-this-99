@@ -47,6 +47,7 @@ export const config: TemplateConfig = {
       "slug",
       "geocodedCoordinate",
       "services",
+      "c_richText"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -143,6 +144,7 @@ const Location: Template<TemplateRenderProps> = ({
     geocodedCoordinate,
     services,
     description,
+    c_richText,
   } = document;
   setTimeout(()=>{
     console.log("intentional error")
@@ -185,6 +187,9 @@ const Location: Template<TemplateRenderProps> = ({
               <button>
                 Test button
               </button>
+            </div>
+            <div>
+              {c_richText}
             </div>
           </div>
         </div>
