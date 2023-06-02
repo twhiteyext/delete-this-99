@@ -35,7 +35,7 @@ import "../index.css";
  */
 export const config: TemplateConfig = {
   stream: {
-    $id: "my-stream-id-2",
+    $id: "my-stream-id-3",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: [
@@ -178,6 +178,8 @@ const Location: Template<TemplateRenderProps> = ({
                 <p className="pt-4">{description} hi there!</p>
               </div>
             </div>
+
+            {/* option 1 */}
             <h1>
               RTF w/ dangerouslySetInnerHTML:
             </h1>
@@ -186,6 +188,8 @@ const Location: Template<TemplateRenderProps> = ({
               Markdown w/ dangerouslySetInnerHTML:
             </h1>
             <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} />
+
+            {/* option 2 */}
             <h1>
               RTF w/ html-react-parser:
             </h1>
