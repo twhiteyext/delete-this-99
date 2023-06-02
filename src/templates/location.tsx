@@ -49,7 +49,9 @@ export const config: TemplateConfig = {
       "geocodedCoordinate",
       "services",
       "c_richTextV2",
-      "c_markdownNew"
+      "c_richTextV2.html",
+      "c_markdownNew",
+      "c_markdownNew.html"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -192,8 +194,8 @@ const Location: Template<TemplateRenderProps> = ({
               </button>
             </div>
             <div>
-              {c_richTextV2}
-              {c_markdownNew}
+              {c_richTextV2.html}
+              {c_markdownNew.html}
             </div>
           </div>
         </div>
