@@ -180,17 +180,17 @@ const Location: Template<TemplateRenderProps> = ({
             </div>
 
             {/* option 1 */}
-            <h1>
+            {/* <h1>
               RTF w/ dangerouslySetInnerHTML:
             </h1>
             <div dangerouslySetInnerHTML={{__html: c_richTextV2.html}} />
             <h1>
               Markdown w/ dangerouslySetInnerHTML:
             </h1>
-            <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} />
+            <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} /> */}
 
             {/* option 2 */}
-            {/* <h1>
+            <h1>
               RTF w/ html-react-parser:
             </h1>
             <div>
@@ -201,7 +201,7 @@ const Location: Template<TemplateRenderProps> = ({
             </h1>
             <div>
               {parse(c_markdownNew.html)}
-            </div> */}
+            </div>
           </div>
         </div>
       </PageLayout>
