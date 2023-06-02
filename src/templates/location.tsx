@@ -26,6 +26,7 @@ import List from "../components/list";
 import PageLayout from "../components/page-layout";
 import StaticMap from "../components/static-map";
 import Favicon from "../public/yext-favicon.ico";
+import parse from "html-react-parser"
 import { LexicalRichText } from "@yext/react-components";
 import "../index.css";
 
@@ -150,15 +151,6 @@ const Location: Template<TemplateRenderProps> = ({
     c_richTextV2,
     c_markdownNew,
   } = document;
-  setTimeout(()=>{
-    console.log("intentional error")
-  }, 2000)
-  const options = {
-    get passive() {
-      console.log("hello")
-      return false
-    }
-  }
   return (
     <>
       <PageLayout _site={_site}>
@@ -187,13 +179,25 @@ const Location: Template<TemplateRenderProps> = ({
               </div>
             </div>
             <h1>
-              RTF:
+              RTF w/ dangerouslySetInnerHTML:
             </h1>
             <div dangerouslySetInnerHTML={{__html: c_richTextV2.html}} />
             <h1>
-              Markdown:
+              Markdown w/ dangerouslySetInnerHTML:
             </h1>
             <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} />
+            <h1>
+              RTF w/ html-react-parser:
+            </h1>
+            <div>
+              {parse(c_richTextV2.html)}
+            </div>
+            <h1>
+              Markdown w/ html-react-parser:
+            </h1>
+            <div>
+              {parse(c_markdownNew.html)}
+            </div>
           </div>
         </div>
       </PageLayout>
