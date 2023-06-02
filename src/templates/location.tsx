@@ -53,7 +53,8 @@ export const config: TemplateConfig = {
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      savedFilterIds: ["465593563"]
+      // savedFilterIds: ["465593563"]
+      savedFilterIds: ["1326852841"]
     },
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -146,6 +147,8 @@ const Location: Template<TemplateRenderProps> = ({
     geocodedCoordinate,
     services,
     description,
+    c_richTextV2,
+    c_markdownNew,
   } = document;
   setTimeout(()=>{
     console.log("intentional error")
@@ -156,9 +159,6 @@ const Location: Template<TemplateRenderProps> = ({
       return false
     }
   }
-  addEventListener('click', ()=>{
-    console.log("CLICKED")
-  })
   return (
     <>
       <PageLayout _site={_site}>
@@ -185,14 +185,15 @@ const Location: Template<TemplateRenderProps> = ({
                 <div className="text-xl font-semibold">{`About ${name}`}</div>
                 <p className="pt-4">{description} hi there!</p>
               </div>
-              <button>
-                Test button
-              </button>
             </div>
-            <div>
-              {document.c_richTextV2.html}
-              {document.c_markdownNew.html}
-            </div>
+            <h1>
+              RTF:
+            </h1>
+            <div dangerouslySetInnerHTML={{__html: c_richTextV2.html}} />
+            <h1>
+              Markdown:
+            </h1>
+            <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} />
           </div>
         </div>
       </PageLayout>
