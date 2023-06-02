@@ -48,9 +48,7 @@ export const config: TemplateConfig = {
       "slug",
       "geocodedCoordinate",
       "services",
-      "c_richTextV2",
       "c_richTextV2.html",
-      "c_markdownNew",
       "c_markdownNew.html"
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -148,8 +146,6 @@ const Location: Template<TemplateRenderProps> = ({
     geocodedCoordinate,
     services,
     description,
-    c_richTextV2,
-    c_markdownNew,
   } = document;
   setTimeout(()=>{
     console.log("intentional error")
@@ -194,8 +190,8 @@ const Location: Template<TemplateRenderProps> = ({
               </button>
             </div>
             <div>
-              {c_richTextV2.html}
-              {c_markdownNew.html}
+              {document.c_richTextV2.html}
+              {document.c_markdownNew.html}
             </div>
           </div>
         </div>
