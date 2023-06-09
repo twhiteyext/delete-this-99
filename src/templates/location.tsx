@@ -54,7 +54,6 @@ export const config: TemplateConfig = {
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      // savedFilterIds: ["465593563"]
       savedFilterIds: ["1326852841"]
     },
     // The entity language profiles that documents will be generated for.
@@ -179,29 +178,9 @@ const Location: Template<TemplateRenderProps> = ({
               </div>
             </div>
 
-            {/* option 1 */}
-            {/* <h1>
-              RTF w/ dangerouslySetInnerHTML:
-            </h1>
+            option 1
             <div dangerouslySetInnerHTML={{__html: c_richTextV2.html}} />
-            <h1>
-              Markdown w/ dangerouslySetInnerHTML:
-            </h1>
-            <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} /> */}
-
-            {/* option 2 */}
-            <h1>
-              RTF w/ html-react-parser:
-            </h1>
-            <div>
-              {parse(c_richTextV2.html)}
-            </div>
-            <h1>
-              Markdown w/ html-react-parser:
-            </h1>
-            <div>
-              {parse(c_markdownNew.html)}
-            </div>
+            <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} />
           </div>
         </div>
       </PageLayout>
