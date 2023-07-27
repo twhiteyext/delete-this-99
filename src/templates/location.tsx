@@ -46,7 +46,6 @@ export const config: TemplateConfig = {
       "description",
       "slug",
       "geocodedCoordinate",
-      "services",
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -140,7 +139,6 @@ const Location: Template<TemplateRenderProps> = ({
     openTime,
     mainPhone,
     geocodedCoordinate,
-    services,
     description,
   } = document;
   return (
@@ -152,7 +150,6 @@ const Location: Template<TemplateRenderProps> = ({
             <div className="grid grid-cols-2 gap-x-10 gap-y-10">
               <div className="bg-gray-100 p-2">
                 <Details address={address} phone={mainPhone}></Details>
-                {services && <List list={services}></List>}
               </div>
               <h1 className="env-variable">
               </h1>
