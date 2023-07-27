@@ -27,7 +27,6 @@ import PageLayout from "../components/page-layout";
 import StaticMap from "../components/static-map";
 import Favicon from "../public/yext-favicon.ico";
 import parse from "html-react-parser"
-import { LexicalRichText } from "@yext/react-components";
 import "../index.css";
 
 /**
@@ -45,16 +44,13 @@ export const config: TemplateConfig = {
       "address",
       "mainPhone",
       "description",
-      "hours",
       "slug",
       "geocodedCoordinate",
       "services",
-      "c_richTextV2.html",
-      "c_markdownNew.html"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      savedFilterIds: ["1326852841"]
+      savedFilterIds: ["1387920930"]
     },
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -142,13 +138,10 @@ const Location: Template<TemplateRenderProps> = ({
     name,
     address,
     openTime,
-    hours,
     mainPhone,
     geocodedCoordinate,
     services,
     description,
-    c_richTextV2,
-    c_markdownNew,
   } = document;
   return (
     <>
@@ -164,7 +157,7 @@ const Location: Template<TemplateRenderProps> = ({
               <h1 className="env-variable">
               </h1>
               <div className="bg-gray-100 p-2">
-                {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
+                {/* {hours && <Hours title={"Restaurant Hours"} hours={hours} />} */}
               </div>
               {geocodedCoordinate && (
                 <StaticMap
@@ -177,10 +170,6 @@ const Location: Template<TemplateRenderProps> = ({
                 <p className="pt-4">{description} hi there!</p>
               </div>
             </div>
-
-            option 1
-            <div dangerouslySetInnerHTML={{__html: c_richTextV2.html}} />
-            <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} />
           </div>
         </div>
       </PageLayout>

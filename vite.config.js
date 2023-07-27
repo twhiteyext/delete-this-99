@@ -7,6 +7,9 @@ export default defineConfig(({ command, mode }) => {
     plugins: [react(), yextSSG()],
     define: {
       ENV_VAR_KEY: JSON.stringify(process.env.ENV_VAR_KEY),
-    }
+    },
+    server: {
+      port: 8000,
+    },
   }
 });
