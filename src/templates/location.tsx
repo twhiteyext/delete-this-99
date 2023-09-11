@@ -49,12 +49,12 @@ export const config: TemplateConfig = {
       "slug",
       "geocodedCoordinate",
       "services",
-      "c_richTextV2.html",
-      "c_markdownNew.html"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      savedFilterIds: ["1326852841"]
+      entityTypes: [
+        "location"
+      ]
     },
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -145,10 +145,7 @@ const Location: Template<TemplateRenderProps> = ({
     hours,
     mainPhone,
     geocodedCoordinate,
-    services,
     description,
-    c_richTextV2,
-    c_markdownNew,
   } = document;
   return (
     <>
@@ -159,7 +156,6 @@ const Location: Template<TemplateRenderProps> = ({
             <div className="grid grid-cols-2 gap-x-10 gap-y-10">
               <div className="bg-gray-100 p-2">
                 <Details address={address} phone={mainPhone}></Details>
-                {services && <List list={services}></List>}
               </div>
               <h1 className="env-variable">
               </h1>
@@ -177,10 +173,6 @@ const Location: Template<TemplateRenderProps> = ({
                 <p className="pt-4">{description} hi there!</p>
               </div>
             </div>
-
-            option 1
-            <div dangerouslySetInnerHTML={{__html: c_richTextV2.html}} />
-            <div dangerouslySetInnerHTML={{__html: c_markdownNew.html}} />
           </div>
         </div>
       </PageLayout>
