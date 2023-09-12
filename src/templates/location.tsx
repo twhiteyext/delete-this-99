@@ -47,7 +47,7 @@ export const config: TemplateConfig = {
       "description",
       "hours",
       "slug",
-      "geocodedCoordinate",
+      "geocodedCoordinate", oihoihjoij
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
