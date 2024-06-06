@@ -48,6 +48,7 @@ export const config: TemplateConfig = {
       "hours",
       "slug",
       "geocodedCoordinate",
+      "c_privateFileFieldTest2"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
