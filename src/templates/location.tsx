@@ -47,8 +47,7 @@ export const config: TemplateConfig = {
       "slug",
       "geocodedCoordinate",
       "services",
-      "c_largefield1",
-      "c_privateFileFieldTest2"
+      "c_largefield1"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
