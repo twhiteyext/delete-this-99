@@ -33,7 +33,7 @@ import "../index.css";
  */
 export const config: TemplateConfig = {
   stream: {
-    $id: "my-stream-id-1",
+    $id: "my-stream-id-2",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: [
@@ -47,10 +47,11 @@ export const config: TemplateConfig = {
       "slug",
       "geocodedCoordinate",
       "services",
+      "c_largefield1"
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      savedFilterIds: ["465593563"]
+      savedFilterIds: ["1397909080"]
     },
     // The entity language profiles that documents will be generated for.
     localization: {
